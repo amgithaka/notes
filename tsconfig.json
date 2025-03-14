@@ -25,6 +25,8 @@
       "@styles/layout": ["./src/exports/styles/layout"],
       "@styles/shared": ["./src/exports/styles/shared"],
       "@styles/view": ["./src/exports/styles/view"],
+      "@fonts/static": ["./src/exports/fonts/static"],
+      "@fonts/dynamic": ["./src/exports/fonts/dynamic"],
       "@core/hooks": ["./src/exports/core/hooks"],
       "@core/utils": ["./src/exports/core/utils"],
       "@_types/components/layout": ["./src/exports/types/components/layout"],
