@@ -19,6 +19,19 @@
       }
     ],
     "paths": {
+      "@components/layout": ["./src/exports/components/layout"],
+      "@components/shared": ["./src/exports/components/shared"],
+      "@components/view": ["./src/exports/components/view"],
+      "@styles/layout": ["./src/exports/styles/layout"],
+      "@styles/shared": ["./src/exports/styles/shared"],
+      "@styles/view": ["./src/exports/styles/view"],
+      "@core/hooks": ["./src/exports/core/hooks"],
+      "@core/utils": ["./src/exports/core/utils"],
+      "@_types/components/layout": ["./src/exports/components/layout"],
+      "@_types/components/shared": ["./src/exports/components/shared"],
+      "@_types/components/view": ["./src/exports/components/view"],
+      "@_types/core/hooks": ["./src/exports/core/hooks"],
+      "@_types/core/utils": ["./src/exports/core/utils"],
       "@/*": ["./src/*"]
     }
   },
