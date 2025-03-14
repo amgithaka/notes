@@ -27,11 +27,11 @@
       "@styles/view": ["./src/exports/styles/view"],
       "@core/hooks": ["./src/exports/core/hooks"],
       "@core/utils": ["./src/exports/core/utils"],
-      "@_types/components/layout": ["./src/exports/components/layout"],
-      "@_types/components/shared": ["./src/exports/components/shared"],
-      "@_types/components/view": ["./src/exports/components/view"],
-      "@_types/core/hooks": ["./src/exports/core/hooks"],
-      "@_types/core/utils": ["./src/exports/core/utils"],
+      "@_types/components/layout": ["./src/exports/types/components/layout"],
+      "@_types/components/shared": ["./src/exports/types/components/shared"],
+      "@_types/components/view": ["./src/exports/types/components/view"],
+      "@_types/core/hooks": ["./src/exports/types/core/hooks"],
+      "@_types/core/utils": ["./src/exports/types/core/utils"],
       "@/*": ["./src/*"]
     }
   },
