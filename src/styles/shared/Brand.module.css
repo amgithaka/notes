@@ -1,0 +1,12 @@
+.Brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.Brand > p {
+  font-weight: 600;
+  font-size: 24px;
+}
