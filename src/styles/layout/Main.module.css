@@ -1,0 +1,28 @@
+.Main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .Main {
+    padding: 0px 32px;
+    width: calc(100vw - 64px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1536px) {
+  .Main {
+    padding: 0px 64px;
+    width: calc(100vw - 128px);
+  }
+}
+
+@media (min-width: 1537px) {
+  .Main {
+    padding: 0px calc(64px + (100vw - 1537px) / 2);
+    width: calc(100vw - (128px + (100vw - 1537px)));
+  }
+}
