@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export namespace Nav {
+export namespace NavMenu {
   export interface Props {
     children: ReactNode;
   }

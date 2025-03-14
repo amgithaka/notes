@@ -3,11 +3,11 @@ import { Brand } from '@components/shared';
 import { HeaderStyles } from '@styles/layout';
 import { Nav } from '@components/layout';
 
-export default function Header({}: HeaderTypes.Props) {
+export default function Header({ navItems }: HeaderTypes.Props) {
   return (
     <header className={HeaderStyles.Header}>
       <Brand />
-      <Nav />
+      <Nav>{navItems}</Nav>
     </header>
   );
 }
