@@ -5,11 +5,13 @@ import { View } from '@components/layout';
 import { Form, Input } from '@components/shared';
 import { NoteStyles } from '@styles/view';
 import { useAddNote } from '@lib/hooks';
+import { useRouter } from 'next/navigation';
 
 export default function Note() {
-  const { addNote } = useAddNote();
+  const { addNote, message } = useAddNote();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const router = useRouter();
 
   interface NoteProps {
     title: string;
@@ -25,6 +27,10 @@ export default function Note() {
     addNote(title, content);
     setTitle('');
     setContent('');
+
+    if (message?.ok) {
+      router.refresh();
+    }
   };
 
   return (
@@ -32,16 +38,19 @@ export default function Note() {
       id='note'
       styles={NoteStyles.Note}
     >
+      <p>{message?.message}</p>
       <Form method={handleSubmit}>
         <Input
           type='text'
           placeholder='Title'
           method={(e) => setTitle(e.target.value)}
+          value={title}
         />
         <Input
           textarea
           placeholder='Start taking notes ...'
           method={(e) => setContent(e.target.value)}
+          value={content}
         />
         <Input
           type='submit'

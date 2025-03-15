@@ -28,6 +28,7 @@ export default function Input({
           id={id}
           placeholder={placeholder}
           onChange={method}
+          value={value}
         ></textarea>
       ) : (
         <input

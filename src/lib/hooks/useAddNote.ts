@@ -2,13 +2,16 @@ import { useState, useEffect } from 'react';
 
 export default function useAddNote() {
   const [database, setDatabase] = useState<IDBDatabase | null>(null);
+  const [message, setMessage] = useState<{
+    ok: boolean;
+    message: string;
+  } | null>(null);
 
   useEffect(() => {
-    let request = indexedDB.open('database', 1);
+    const request = indexedDB.open('database', 1);
 
     request.onupgradeneeded = (event) => {
-      let db = (event.target as IDBOpenDBRequest).result;
-
+      const db = (event.target as IDBOpenDBRequest).result;
       if (!db.objectStoreNames.contains('notes')) {
         db.createObjectStore('notes', { keyPath: 'id', autoIncrement: true });
       }
@@ -19,20 +22,30 @@ export default function useAddNote() {
     };
 
     request.onerror = () => {
-      console.error('Failed to open database');
+      setMessage({ ok: false, message: 'Failed to open database' });
     };
   }, []);
 
   const addNote = (title: string, content: string) => {
-    if (!database) return;
+    if (!database) {
+      setMessage({ ok: false, message: 'Database is not initialized' });
+      return;
+    }
 
-    let transaction = database.transaction('notes', 'readwrite');
-    let store = transaction.objectStore('notes');
+    const transaction = database.transaction('notes', 'readwrite');
+    const store = transaction.objectStore('notes');
+    const note = { title, content, date: new Date().toISOString() };
 
-    let note = { title, content, date: new Date().toISOString() };
+    const addRequest = store.add(note);
 
-    store.add(note);
+    addRequest.onsuccess = () => {
+      setMessage({ ok: true, message: 'Note added successfully' });
+    };
+
+    addRequest.onerror = () => {
+      setMessage({ ok: false, message: 'Failed to add note' });
+    };
   };
 
-  return { addNote };
+  return { addNote, message };
 }
