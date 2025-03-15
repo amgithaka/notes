@@ -14,6 +14,7 @@ export default function Input({
   rows,
   cols,
   textarea,
+  method,
 }: InputTypes.Props) {
   return (
     <div className={textarea ? InputStyles.InputTextarea : InputStyles.Input}>
@@ -26,6 +27,7 @@ export default function Input({
           cols={cols}
           id={id}
           placeholder={placeholder}
+          onChange={method}
         ></textarea>
       ) : (
         <input
@@ -35,6 +37,7 @@ export default function Input({
           placeholder={placeholder}
           name={name}
           className={workSans.className}
+          onChange={method}
         />
       )}
     </div>

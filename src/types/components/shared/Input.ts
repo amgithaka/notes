@@ -9,5 +9,6 @@ export namespace Input {
     rows?: number;
     cols?: number;
     textarea?: boolean;
+    method?: (e: any) => void;
   }
 }

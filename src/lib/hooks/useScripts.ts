@@ -9,7 +9,10 @@ export default function useScripts() {
         let database = (event.target as IDBOpenDBRequest).result;
 
         if (!database.objectStoreNames.contains('notes')) {
-          database.createObjectStore('notes', { keyPath: 'id' });
+          database.createObjectStore('notes', {
+            keyPath: 'id',
+            autoIncrement: true,
+          });
         }
       };
     }
