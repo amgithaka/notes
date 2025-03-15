@@ -11,7 +11,7 @@
   padding: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  width: auto;
+  width: 32ch;
 }
 
 .Input > input:focus {
@@ -27,6 +27,7 @@
   color: white;
   font-weight: 600;
   border: none;
+  width: auto;
 }
 
 .InputTextarea {

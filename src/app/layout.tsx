@@ -1,4 +1,5 @@
 import '@/styles/global.css';
+import { Scripts } from '@components/shared';
 import { workSans } from '@fonts/dynamic';
 
 export default function RootLayout({
@@ -8,7 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={workSans.className}>{children}</body>
+      <body className={workSans.className}>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }

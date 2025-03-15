@@ -3,14 +3,11 @@
   text-decoration: none;
 }
 
-.NavItem {
-  color: rgba(0, 0, 0, 0.5);
-}
-
 .Active {
   font-weight: 600;
 }
 
-.NavItem:hover {
-  color: rgba(0, 0, 0, 1);
+.NavItem:hover,
+.Active:hover {
+  text-decoration: underline;
 }
