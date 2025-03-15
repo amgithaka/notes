@@ -27,13 +27,13 @@
       "@styles/view": ["./src/exports/styles/view"],
       "@fonts/static": ["./src/exports/fonts/static"],
       "@fonts/dynamic": ["./src/exports/fonts/dynamic"],
-      "@core/hooks": ["./src/exports/core/hooks"],
-      "@core/utils": ["./src/exports/core/utils"],
+      "@lib/hooks": ["./src/exports/lib/hooks"],
+      "@lib/utils": ["./src/exports/lib/utils"],
       "@_types/components/layout": ["./src/exports/types/components/layout"],
       "@_types/components/shared": ["./src/exports/types/components/shared"],
       "@_types/components/view": ["./src/exports/types/components/view"],
-      "@_types/core/hooks": ["./src/exports/types/core/hooks"],
-      "@_types/core/utils": ["./src/exports/types/core/utils"],
+      "@_types/lib/hooks": ["./src/exports/types/lib/hooks"],
+      "@_types/lib/utils": ["./src/exports/types/lib/utils"],
       "@/*": ["./src/*"]
     }
   },
