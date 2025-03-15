@@ -7,6 +7,9 @@
   justify-content: flex-start;
   gap: 64px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  background-color: white;
 }
 
 @media (max-width: 768px) {

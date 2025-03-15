@@ -16,4 +16,5 @@
   gap: 64px;
   width: 192px;
   overflow-y: auto;
+  background-color: white;
 }

@@ -1,3 +1,3 @@
 export namespace UseTrigger {
-  export interface Props {}
+  export interface Args {}
 }

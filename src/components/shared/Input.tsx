@@ -1,3 +1,5 @@
+'use client';
+
 import { InputTypes } from '@_types/components/shared';
 import { workSans } from '@fonts/dynamic';
 import { InputStyles } from '@styles/shared';
