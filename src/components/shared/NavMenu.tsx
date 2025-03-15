@@ -17,8 +17,8 @@ export default function NavMenu({ children }: NavMenuTypes.Props) {
         <Icon
           name={trigger ? 'close.svg' : 'menu.svg'}
           alt={`${trigger ? 'Close' : 'Menu'} Icon`}
-          width={24}
-          height={24}
+          width={20}
+          height={20}
         />
       </div>
       {trigger && <div className={NavMenuStyles.Body}>{children}</div>}

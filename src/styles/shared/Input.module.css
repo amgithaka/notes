@@ -44,8 +44,9 @@
   padding: 16px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  width: calc(100% - 32px);
+  width: calc(100% - 32px - 2px);
   flex-grow: 1;
+  resize: none;
 }
 
 .InputTextarea > textarea:focus {
